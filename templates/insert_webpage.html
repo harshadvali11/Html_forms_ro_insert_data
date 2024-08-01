@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>insert_webapge</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <label for="topic">Topic_Name</label>
+            <select name="topic" id="topic">
+
+                {% for to in LTO %}
+                    <option value="{{to.topic_name}}">{{to.topic_name}}</option>
+                {% endfor %}
+
+            </select>
+            <br><br>
+
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"> <br> <br>
+
+            <label for="url">url</label>
+            <input type="url" name="url" id="url"> <br><br>
+
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"> <br><br>
+
+
+
+            <input type="submit" value="insert_webpage">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+    </center>
+</body>
+</html>
